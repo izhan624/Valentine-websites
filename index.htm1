@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+        p {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        #yes {
+            background-color: #ff6f91;
+            color: white;
+        }
+        #no {
+            background-color: #ffcc5c;
+            color: white;
+            position: relative;
+        }
+        /* Make the "No" button run away on hover */
+        #no:hover {
+            animation: moveAway 0.5s forwards;
+        }
+        @keyframes moveAway {
+            0%   { transform: translate(0, 0); }
+            100% { transform: translate(150px, -50px); }
+        }
+        /* Cute kitten image style */
+        .kitten {
+            max-width: 300px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img class="kitten" src="https://placekitten.com/300/300" alt="Cute Kitten">
+    <h1>Will You Be My Valentine?</h1>
+    <p>I really like you and would love to share a lot of smiles with you.</p>
+    <div class="buttons">
+        <button id="yes" onclick="alert('Yay! I knew you would!')">Yes</button>
+        <button id="no" onclick="alert('Oh no! Try again...')">No</button>
+    </div>
+</body>
+</html>
